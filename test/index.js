@@ -74,7 +74,7 @@ test('no propagation when listener turned off', function(t) {
 
   // turn off both event listeners
   direct.off( target, 'click', directStream.handler_ref );
-  direct.off( el, 'click', directStream.handler_ref );
+  direct.off( el, 'click', delegateStream.handler_ref );
 
   directStream.once('data', function(ev) {
     t.fail('should not be triggered')
