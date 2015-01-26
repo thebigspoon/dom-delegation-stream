@@ -1,7 +1,6 @@
 # dom-delegation-stream
 
-[![Build Status](http://img.shields.io/travis/jarofghosts/dom-delegation-stream/master.svg?style=flat)](https://travis-ci.org/jarofghosts/dom-delegation-stream)
-[![npm install](http://img.shields.io/npm/dm/dom-delegation-stream.svg?style=flat)](https://www.npmjs.org/package/dom-delegation-stream)
+[![Build Status](http://img.shields.io/travis/thebigspoon/dom-delegation-stream/master.svg?style=flat)](https://travis-ci.org/jarofghosts/dom-delegation-stream)
 
 simple streaming DOM event delegation
 
