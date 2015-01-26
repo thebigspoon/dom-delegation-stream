@@ -1,6 +1,6 @@
 # dom-delegation-stream
 
-[![Build Status](http://img.shields.io/travis/thebigspoon/dom-delegation-stream/master.svg?style=flat)](https://travis-ci.org/jarofghosts/dom-delegation-stream)
+[![Build Status](https://travis-ci.org/thebigspoon/dom-delegation-stream.svg)](https://travis-ci.org/thebigspoon/dom-delegation-stream)
 
 simple streaming DOM event delegation
 
