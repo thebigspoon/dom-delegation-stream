@@ -16,6 +16,7 @@ function delegateStream(el, type, selector, _options) {
     delegate.on(el, selector, type, handler, options.useCapture)
   }
 
+  stream.handler_ref = handler
   return stream
 
   function handler(ev) {

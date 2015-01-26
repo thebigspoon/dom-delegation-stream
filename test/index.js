@@ -1,4 +1,5 @@
 var dom = require('dom-sandbox')
+  , direct = require('dom-event')
   , test = require('tape')
 
 var events = require('../')
@@ -61,3 +62,30 @@ test('stops propagation if specified', function(t) {
 
   target.click()
 })
+
+test('no propagation when listener turned off', function(t) {
+  var el = dom()
+  var target = document.createElement('input')
+  var directStream = events(target, 'click', {stopPropagation: true})
+  var delegateStream = events(el, 'click', 'input[type=text]')
+
+  target.type = 'button'
+  el.appendChild(target)
+
+  // turn off both event listeners
+  direct.off( target, 'click', directStream.handler_ref );
+  direct.off( el, 'click', directStream.handler_ref );
+
+  directStream.once('data', function(ev) {
+    t.fail('should not be triggered')
+  })
+
+  delegateStream.once('data', function() {
+    t.fail('should not be triggered')
+  })
+
+  setTimeout(t.end.bind(t), 100)
+
+  target.click()
+})
+
